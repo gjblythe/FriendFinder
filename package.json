@@ -4,7 +4,8 @@
   "description": "Dating App",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
