@@ -2,48 +2,57 @@
 
 var friendArray = [
   {
-    name: "Ahmed",
+    name: "test",
     photo:
       "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    scores: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
+    scores: [0, 1, 3, 3, 5, 3, 2, 5, 4, 1]
   },
   {
     name: "Ahmed's Twin",
     photo:
       "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    scores: [0, 1, 3, 3, 5, 3, 2, 5, 4, 1]
+    scores: [0, 1, 0, 0, 0, 0, 0, 5, 4, 1]
   }
 ];
-var newFriend =
-{
-    name: "Gmoney",
+var newFriend = [{
+    name: "Vader",
     photo:
       "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    scores: [0, 1, 3, 3, 5, 3, 2, 5, 4, 1]
-};
+    scores: [0, 1, 3, 7, 5, 3, 2, 5, 4, 1]
+  }];
 
-
-
-function compaireFriend()  {
-    for (var i = 0; i < friendArray.length; i++){
-        var friendList = friendArray[i];
-
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  
+  //this function compairs the user score to the score of the friendArray
+  function totalDiff (arrF, newA){
+    var totalDifference = 0;
+    var score = 100;
+    var match = "";
+    for (var i = 0; i < arrF.length; i++){
+        for ( var j = 0; j < arrF[i].scores.length; j++){
+          
         
-        var newScore = newFriend.scores.reduce(reducer);
-        
-        var friendScore = friendArray[i].scores.reduce(reducer);
-        
+            totalDifference += Math.abs(newA[0].scores[j] - arrF[i].scores[j]);
+          
+            if (totalDifference <= score) {
+             
+                  score = totalDifference
+                  match = arrF[i].name;
+                  console.log(`score ${score} Name ${match}`);
+                } 
+                
+              }
+              totalDifference = 0;
+              
+
     }
-            if (newScore === friendScore){
-                console.log(`Hello ${newFriend.name}, Your new friend is ${friendList.name}.`)
-            } else {
-            console.log(`Goodbye ${newFriend.name}, This guy hates you ${friendList.name}.`)
-            }
+    return console.log(`Name ${match.name} \nPhoto ${match.photo}`);
+
 }
 
+totalDiff(friendArray, newFriend);
 
-compaireFriend();
 //export to apiRoute.js
 
-module.exports = friendArray;
+exports.friendArray = friendArray;
+exports.newFriend = newFriend;
+// exports.compaireFriend = compaireFriend();
