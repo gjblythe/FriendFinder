@@ -16,8 +16,14 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Best Friend Survey</h1>
-      <h3></h3>
+      <div id="survey">
+        <h1>Best Friend Survey</h1>
+        <h3></h3>
+      </div>
+      <div id="matchDisplay">
+        <h1>Your match is!</h1>
+        <div id="match"></div>
+      </div>
       <hr>
       <a href="/">
         <button class="btn btn-info btn-lg">
@@ -25,153 +31,211 @@
       </a>
       <div class="row"></div>
       <hr>
-      <p>Enter your Name.</p>
-      <div class="input-group mb-3">
+      <div id="allQuestions">
+        <p>Enter your Name.</p>
+        <div class="input-group mb-3">
 
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Your Name</span>
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Your Name</span>
+          </div>
+          <input type="text" id="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
-        <input type="text" id="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-      </div>
-      <hr>
+        <hr>
 
-      <label for="basic-url">
-        <p>Provide a Link to your Photo</p>
-      </label>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+        <label for="basic-url">
+          <p>Provide a Link to your Photo</p>
+        </label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">https://linktophoto.com/</span>
+          </div>
+          <input type="text" class="form-control" id="photo" aria-describedby="basic-addon3">
         </div>
-        <input type="text" class="form-control" id="photo" aria-describedby="basic-addon3">
-      </div>
-      <hr>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Please enter a number between 5 and 1.
+          <br>
+          5 being Absolutely and 1 Being Not at All.</p>
+        <hr>
+        <p>Question One: Do you like Movies?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question1" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Two: Do you like Video Games?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question2" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Three: Do you believe in Ninjas?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question3" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Four: Do you like coding UI/UX?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question4" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Five: Do you like coding the Back-end?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question5" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Six: Do you like coding Bootcamps?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question6" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-      <hr>
+        <p>Question Seven: Ronald McDonald is your personal hero?</p>
+        <div class="input-group">
+          <select class="custom-select" id="question7" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
 
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-          <option selected>TEXT THE QUESTIONS HERE</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+        <p>Question Eight: Sleep is overated.</p>
+        <div class="input-group">
+          <select class="custom-select" id="question8" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
+
+        <p>Question Nine: A sword is an sound fashion choice.</p>
+        <div class="input-group">
+          <select class="custom-select" id="question9" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
+
+        <p>Question Ten: Your favorite Planet is Melmac.</p>
+        <div class="input-group">
+          <select class="custom-select" id="question10" aria-label="Example select with button addon">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <hr>
+
+        <button id="submit" type="submit" class="btn btn-info btn-lg">
+          <span class="fa fa-th-list"></span> SURVEY SAYS!</button>
       </div>
-      <hr>
-
-      <button class="btn btn-info btn-lg">
-        <span class="fa fa-th-list"></span> SURVEY SAYS!</button>
-
     </div>
   </div>
 
+  <script>
+    $(document).ready(function () {
+      $("#matchDisplay").hide();
+      console.log("ready");
+    });
 
-  </div>
+    $("#submit").click(function (event) {
+      event.preventDefault();
 
+      var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+          parseInt($("#question1").val()),
+          parseInt($("#question2").val()),
+          parseInt($("#question3").val()),
+          parseInt($("#question4").val()),
+          parseInt($("#question5").val()),
+          parseInt($("#question6").val()),
+          parseInt($("#question7").val()),
+          parseInt($("#question8").val()),
+          parseInt($("#question9").val()),
+          parseInt($("#question10").val()),
+        ]
+      };
+      console.log(JSON.stringify(newFriend) + " HTML")
+
+      //ask why this is not retuning any match values
+      $.post("/api/friends", newFriend).done(function (data) {
+        console.log(data.friendArray);
+        $("#match").html(data.match);
+      })
+
+      $("#allQuestions").hide();
+      $("#survey").hide();
+      $("#matchDisplay").show();
+      
+      //reset
+      $("#name").val("");
+      $("#photo").val("");
+      $("#question1").val(1);
+      $("#question2").val(1);
+      $("#question3").val(1);
+      $("#question4").val(1);
+      $("#question5").val(1);
+      $("#question6").val(1);
+      $("#question7").val(1);
+      $("#question8").val(1);
+      $("#question9").val(1);
+      $("#question10").val(1);
+
+    });
+
+  </script>
 
 </body>

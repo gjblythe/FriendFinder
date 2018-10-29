@@ -15,7 +15,8 @@ app.post('/api/friends', function(req, res) {
     var newScore = newFriend.scores;
     console.log(newScore);
 
-    var match = '';
+    var matchName = '';
+    var matchPhoto = '';
     var score = 100;
 console.log(friendData.friendArray)
     //nested for loop to compair the abs value of the score arrays
@@ -28,11 +29,12 @@ console.log(friendData.friendArray)
             if (totalDifference < score) {
                 score = totalDifference;
                 console.log(`score ${score}`);
-                match = friendData.friendArray[i]
+                matchName = friendData.friendArray[i].name;
+                matchPhoto = friendData.friendArray[i].photo;
             }
             
         }
-        console.log("Match " + match.name)
+        console.log("Match on API route: " + matchName +"\nPhoto" + matchPhoto)
     friendData.friendArray.push(newFriend);
 
     res.json(friendData.newFriend);
