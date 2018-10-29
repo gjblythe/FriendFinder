@@ -183,7 +183,8 @@
     </div>
   </div>
 
-  <script>
+  <script type="text/javascript">
+
     $(document).ready(function () {
       $("#matchDisplay").hide();
       console.log("ready");
@@ -191,7 +192,7 @@
 
     $("#submit").click(function (event) {
       event.preventDefault();
-
+      
       var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
@@ -209,7 +210,8 @@
         ]
       };
       console.log(JSON.stringify(newFriend) + " HTML")
-
+      
+      
       //ask why this is not retuning any match values
       $.post("/api/friends", newFriend).done(function (data) {
         console.log(data.friendArray);
