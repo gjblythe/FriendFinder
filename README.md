@@ -6,6 +6,8 @@ After the User provides thier basic info Name, link to photo, and scores this pr
 
 After match is determined the Name and Photo of thier match is displayed.
 
+the friends array can be viewed by visiting this path /api/friends
+
 The new User is now added into the Pool of Friends for future matches.
 
 2018
