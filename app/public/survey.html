@@ -22,12 +22,13 @@
       </div>
       <div id="matchDisplay">
         <h1>Your match is!</h1>
-        <div id="match"></div>
+        <h2 id= "match"></h2>
+        <div id= "image"></div>
       </div>
       <hr>
       <a href="/">
-        <button class="btn btn-info btn-lg">
-          <span class="fa fa-th-list"></span> Home</button>
+        <button class= "btn btn-info btn-lg">
+          <span class= "fa fa-th-list"></span> Home</button>
       </a>
       <div class="row"></div>
       <hr>
@@ -193,7 +194,10 @@
     $("#submit").click(function (event) {
       event.preventDefault();
       
-      var newFriend = {
+
+      if ($("#name").val() !== "" && $("#photo").val() !== "") 
+      {
+        var newFriend = {
         name: $("#name").val().trim(),
         photo: $("#photo").val().trim(),
         scores: [
@@ -209,15 +213,27 @@
           parseInt($("#question10").val()),
         ]
       };
-      console.log(JSON.stringify(newFriend) + " HTML")
+    } else if ($("#name").val() === ""){
+      return alert("Enter your Name.");
+    } else {
+      return alert("Enter your Name.");
+    }
+      
+      console.log(JSON.stringify(newFriend) + " HTML");
       
       
-      //ask why this is not retuning any match values
-      $.post("/api/friends", newFriend).done(function (data) {
-        console.log(data.friendArray);
-        $("#match").html(data.match);
+      var currentURL = window.location.origin;
+
+      //takes the res object and displays on the DOM
+$.post("/api/friends", newFriend).done(function (data) {
+        console.log(data.matchName + "\n" + data.matchPhoto);
+        var matchImg = $("<img>");
+        matchImg.attr("src", data.matchPhoto);
+        $("#match").html(data.matchName);
+        $("#image").append(matchImg);
       })
 
+      
       $("#allQuestions").hide();
       $("#survey").hide();
       $("#matchDisplay").show();
@@ -235,8 +251,9 @@
       $("#question8").val(1);
       $("#question9").val(1);
       $("#question10").val(1);
-
+      
     });
+    
 
   </script>
 

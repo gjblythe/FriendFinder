@@ -18,7 +18,8 @@ app.post('/api/friends', function(req, res) {
     var matchName = '';
     var matchPhoto = '';
     var score = 100;
-console.log(friendData.friendArray)
+    
+
     //nested for loop to compair the abs value of the score arrays
     for (let i = 0; i < friendData.friendArray.length; i++) {
         var totalDifference = 0;
@@ -37,7 +38,7 @@ console.log(friendData.friendArray)
         console.log("Match on API route: " + matchName +"\nPhoto" + matchPhoto)
     friendData.friendArray.push(newFriend);
 
-    res.json(friendData.newFriend);
+    res.json({status: '200', matchName: matchName, matchPhoto: matchPhoto});
     
    
 });
