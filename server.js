@@ -9,10 +9,11 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 //header
+app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/css",express.static(__dirname + "app/assets/"));
+
 //req for routes
 app.use(express.static(path.join(__dirname + 'app/public')));
 require("./app/routing/htmlRoutes")(app);

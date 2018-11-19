@@ -11,7 +11,7 @@ var friendArray = [
     name: "Alf",
     photo:
       "https://ih0.redbubble.net/image.422284817.3738/flat,550x550,075,f.u1.jpg",
-    scores: [5, 5, 5, 1, 1, 1, 1, 5, 3, 5]
+    scores: [3, 3, 3, 1, 1, 1, 1, 5, 3, 5]
   },
   {
     name: "Mikey",
