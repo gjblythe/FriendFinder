@@ -9,12 +9,6 @@ After the User provides thier basic info Name, link to photo, and scores this pr
 
 After match is determined the Name and Photo of thier match is displayed.
 
-Potential Matches:
-[](https://github.com/gjblythe/FriendFinder/grimace.png)
-[](https://github.com/gjblythe/FriendFinder/raw/master/mikey.png)
-[](https://github.com/gjblythe/FriendFinder/raw/master/wicket.png)
-[](https://github.com/gjblythe/FriendFinder/raw/master/alf.png)
-
 the friends array can be viewed by visiting this path /api/friends
 
 ![](https://github.com/gjblythe/FriendFinder/raw/master/apiFriends.gif)
