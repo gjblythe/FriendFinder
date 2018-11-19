@@ -1,6 +1,9 @@
 # FriendFinder
 
-This full stack application matches Users together.
+This full stack application matches Users together. Not a dating app!
+
+
+![](https://github.com/gjblythe/FriendFinder/raw/master/friendApp.gif)
 
 After the User provides thier basic info Name, link to photo, and scores this program runs an algorithm(totalDifferenc) to determine the best match by taking the absolute value for the difference between the arrays.
 
